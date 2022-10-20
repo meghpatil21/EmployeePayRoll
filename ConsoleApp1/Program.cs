@@ -6,6 +6,7 @@
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program.");
 
+            int empWorkHours = 0, empWage = 0;
             Random random = new Random();
             int empCheck= random.Next(0,2);
 
@@ -13,13 +14,15 @@
             {
                 case 0: 
                     Console.WriteLine("Employee is Present");
+                    empWorkHours = empWorkHours + 8;
+                    empWage = empWorkHours * 20;
                     break;
                 default:
                     Console.WriteLine("Employee is Absent");
                     break ;
             }
 
-
+            Console.WriteLine("Todays Employee Wage: "+ empWage);
         }
     }
 }
