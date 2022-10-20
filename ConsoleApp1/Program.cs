@@ -7,11 +7,12 @@
             
             Console.WriteLine("Welcome to Employee Wage Computation Program.");
             Console.WriteLine();
-            int totalWage = 0;
+            int totalWage = 0, dayCount=0, totalHours=0;
 
-            for (int i = 1; i < 21; i++)
+            do
             {
-                Console.WriteLine("Day "+i);
+                dayCount++;
+                Console.WriteLine("Day "+dayCount);
 
                 int empWorkHours = 0, empWage = 0; 
                 Random random = new Random();
@@ -33,15 +34,17 @@
                         Console.WriteLine("Employee is Absent");
                         break;
                 }
-                
+                totalHours=totalHours+ empWorkHours;
+
                 totalWage=totalWage+empWage;
 
                 Console.WriteLine("Todays Employee Wage: " + empWage);
-                Console.WriteLine($"Total Wage till day {i} : "+totalWage);
+                Console.WriteLine($"Total Wage till day {dayCount} : "+totalWage);
                 Console.WriteLine();
                 //Already use Switch Statement so no changes
-            }
+            }while(dayCount<20 && totalHours<100);
 
+            Console.WriteLine($"Total hours {totalHours} and Total days {dayCount}");
         }
     }
 }
