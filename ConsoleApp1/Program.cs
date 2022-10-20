@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Welcome to Employee Wage Computation Program.");
+            Console.WriteLine();
 
             int empWorkHours = 0, empWage = 0;
             Random random = new Random();
@@ -28,6 +30,8 @@
             }
 
             Console.WriteLine("Todays Employee Wage: "+ empWage);
+
+            //Already use Switch Statement so no changes
         }
     }
 }
